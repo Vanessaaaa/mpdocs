@@ -183,47 +183,117 @@ In Rule information, the only difference is about Location. There are 5 Location
 
 #### b. Products to Meet Conditions
 
-![ARP13](https://i.imgur.com/lxhr7T0.png)
-
 * By Conditions, you can select the Category Page you want the Rule to be applied to, you cannot select as many conditions as the Product Page.
-* There’s no Preview Product here
 
-#### 3.3 Actions
+![ARP16](https://i.imgur.com/ApF3UKv.png)
+
+* There’s no Preview Product here (Because this is choose Category)
+
+#### c. Products to Show
 * Action Page of Category Rule doesn't have *Add Product item* as in Product Page Rule.
 * For the rest, it's similar to Action section of Product Page. Click [here](https://docs.mageplaza.com/automatic-related-products/index.html#action) to refer.
 
-#### 3.4 A/B Testing
+#### d. A/B Testing
 Completely Similar to A/B Testing of the Product Page. Click [here](https://docs.mageplaza.com/automatic-related-products/index.html#a-b-testing) to refer.
 
-### IV. Manage Rules on View Cart Page
+### 4. Manage Rules on View Cart Page
 This section allows you to install the Related Product Block in your desired View Cart Page. When the View Cart Page fulfills the Rule, the Related Product Block will be displayed in the selected position.
 
-Headings in the Rule Shopping Page are quite similar to the Rule Product Page.
+Headings in the Rule Shopping Page are quite similar to the Rule Product Page, we will only guild you the diferences. 
 
-#### 4.1 Rule Information
+#### a. Rule Information
 
-![ARP13](https://i.imgur.com/n7JllM5.png)
+In the Rule Information, the only different is about Location. There are 6 Location options to display the Block in Category Page, it lacks 3 options relating to Related Product compare to Product Rule
 
-There are 6 Location options to display the Block in Category Page. In **Location** field
-* **Related Product Block**: the new block replaces Magento's default Cross Product Block in View Cart Page.
-* **Before cross product**:  The Related Product Block is displayed  at the top of the Cross Product Block of the View Cart Page.
-* **After cross products**: The related Product Block is displayed under the Cross Product Block of View Cart Page.
-* **Above Content**: Related Product Block is displayed at the top of Content of View Cart Page
-* **Below Content**: Related Product Block is displayed below Content of View Cart Page
-* **Custom**: You can select the block’s display location in any position. There will be a specific guide for this section at the end of this user guide.
+![ARP17](https://i.imgur.com/D1Xsob4.png)
 
-#### 4.2 Conditions
-
-![ARP14](https://i.imgur.com/9uD0FJ9.png)
+#### b. Products to Meet Conditions
 
 You can select the same conditions as the Product Page. Furthermore, you can set additional conditions for Total Items in the Cart, Total Price and Total Volume of Products.
 
-#### 4.3 Actions
+![ARP18](https://i.imgur.com/eHd1UQ4.png)
+
+#### c. Products to Show
 * Action Page of Shopping Cart Page Rule doesn't have *Add Product* as in Product Page Rule.
 * For the rest, it's similar to Action section of Product Page. lick [here](https://docs.mageplaza.com/automatic-related-products/index.html#action) to refer.
 
-#### 4.4 A/B Testing
+#### d. A/B Testing
 Completely Similar to A/B Testing of the Product Page. Click [here](https://docs.mageplaza.com/automatic-related-products/index.html#a-b-testing) to refer.
+
+### 5. Manange Rules on One Page Checkout
+* ARP compatible with the Mageplaza OSC extension, the admin needs to set OSC to display ARP on the Frontend.
+* The settings are quite similar to other rules
+
+### 6. How to reject ARP extension in a specific Product Detail
+* Choose `Catalog > Product > Edit Product` which admin does not want to adopt  ARP extension
+* Choose **Related Products, Up-Sells, and Cross-Sells**
+* Enable  **Manually Setup Auto Related Products**
+* Save Products
+This function makes the ARP extension not to work on this product. The Related Products which are displayed in Frontend will be based on the Related of Product with the design after Core
+
+### 7. How to set the Where to display = (Manually) 
+Firstly, the Admin needs to set the Rule with Where to Display = Manually and set store view = All Store Views, and then can customize the ARP block in the following ways. Otherwise, the Frontend will display both Widgets and Rules
+
+#### a. Create Widget
+* Step 1: Select the Type
+  * Choose `Content > Elements > Widgets > Add Widget`
+  * In the Setting section, choose `Type = ARP Product List`, degisn any theme
+
+![ARP19](https://i.imgur.com/jGsFtn3.png)
+
+  * Choose the `Continue` button
+
+* Step 2: Set up Widget
+  * In the Storefront Properties section:
+      * Enter the name of Widget and StoreView display
+      * At Layout Update, choose the Widget display page in Display on, after that choose the display position for Widget on that page in the Container section
+      * Need to select Display on = Category if you want to custom the Category Rule and select Display on = Product if you want to custom the Product Rule. If not, the Rule will not be display
+
+![ARP20](https://i.imgur.com/oyt9f9q.png)
+
+  * In the Widget Option section, choose the Rule Name that you want
+
+![ARP21](https://i.imgur.com/wqEQSf7.png)
+
+![ARP22](https://i.imgur.com/Gj7drW1.png)
+
+  * Choose Save to finish creating Widget
+* Step 3: Check in Frontend
+
+#### b. Insert ARP in CMS Static Block
+* Step 1: Insert the ARP into the CMS Static Block
+  * Select `Content > Elements > Blocks > Edit / Add New CMS Static Block` that you want to add ARP
+  * In Content of CMS Static Block, there are 2 ways to add ARP
+      * Option 1: Select `Insert Widget> Widget Type = ARP Product List> Select Rule Name> Click Insert Widget`
+
+![ARP24](https://i.imgur.com/8NG2hXZ.gif)
+
+  * Option 2: Click on `Show / Hide Editor`, then paste the following code directly into Content. You can change rule_id to the ID of the rule that you want to insert
+      
+```
+{block class = "Mageplaza \ AutoRelated \ Block \ Widget \ ProductList" rule_id = "1"}}
+```
+
+![ARP25](https://i.imgur.com/FPhlh2T.png)
+
+  * Select `Save` to save the change
+
+* Step 2: Check the Frontend
+
+#### c. Insert the code into the .phtml file
+This way you can insert anywhere you want, you just only need to know the location of the .phtml file
+```
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
+$productList= $objectManager->create("Mageplaza\AutoRelated\Block\Widget\ProductList")->setRuleId(1)->toHtml(); 
+echo $productList;
+```
+
+
+
+    
+
+
+
 
 
 
