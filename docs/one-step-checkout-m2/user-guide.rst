@@ -155,6 +155,7 @@ Make your way to ``MStores > Settings > Configuration > Mageplaza Extensions > O
 .. image:: http://imgur.com/QpvpZmH.jpg
 
 2.2.2.1. Review Cart Section
+''''''''''''''''''''''''''''''''''''
 
 .. image:: https://i.imgur.com/1NXqUR6.png
 
@@ -163,6 +164,7 @@ Make your way to ``MStores > Settings > Configuration > Mageplaza Extensions > O
 * In the **Show Product Thumbnail Image** field: Choose "Yes" to show thumbnail
 
 2.2.2.2. Gift Wrap
+''''''''''''''''''''''''''''''''''''
 
 .. image:: https://i.imgur.com/tZG0Yxc.png
 
@@ -171,6 +173,7 @@ Make your way to ``MStores > Settings > Configuration > Mageplaza Extensions > O
   * **Amount** field, enter the gift wrap fee. If you leave it blank, **Gift wrap fee = 0**
   
 2.2.2.3. Newsletter
+''''''''''''''''''''''''''''''''''''
 
 .. image:: https://i.imgur.com/znNzYws.png
 
@@ -178,6 +181,7 @@ Make your way to ``MStores > Settings > Configuration > Mageplaza Extensions > O
 * Checked Newsletter by default will be displayed. Select “Yes” to keep this item be checked as always.
 
 2.2.2.4. Survey
+''''''''''''''''''''''''''''''''''''
 
 .. image:: https://i.imgur.com/0DkKo3v.png
 
@@ -187,6 +191,7 @@ Make your way to ``MStores > Settings > Configuration > Mageplaza Extensions > O
   * **Allow Customer Add Other Option**: Select “Yes” so that customers can make their own answers to survey questions.
 
 2.2.2.5. Seal Block
+''''''''''''''''''''''''''''''''''''
 
 * Seal Block always displays under Place Order button
 
@@ -206,6 +211,7 @@ Make your way to ``MStores > Settings > Configuration > Mageplaza Extensions > O
 .. image:: https://i.imgur.com/EXFwdXT.png
 
 2.2.2.6. Static CMS Block
+''''''''''''''''''''''''''''''''''''
 
 .. image:: https://i.imgur.com/634SZ8G.png
 
