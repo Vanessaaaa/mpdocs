@@ -73,9 +73,9 @@ To create a new Rule on Product Page, go to ``Marketing  > Automatic Related Pro
     
     * **Below Content**: Auto Related Product block displayed under the Content of the Product Page
 
-    * **Floating Left Bar**:
+    * **Floating Left Bar**
     
-    * **Floating Right Bar**:
+    * **Floating Right Bar**
     
     
 * **Manually**: Admins can adjust the position to show the ARP Block according to the guide. With the guide is Manually, ARP only works on the Product List Page and Product Detail Page
@@ -115,8 +115,8 @@ After saving the conditions, you can get a Product List. Click on ``Preview Prod
   * The **Block name** field is where you can name the block which is displayed in the frontend. If you don’t want to have it named, leave it blank.
   * In the **Product Layout** field: There are two modes. You can choose the Slider mode or the Grid mode
   * In the **Display mode** fields: There are two Display Style that you could choose.
-    * Ajax Display: The ARP block is loaded after the page loads, and it will take a while to display in the Frontend. This option is useful for loading speed of page
-    * Block Display: ARP block will be loaded when loading page and display as soon as the page is loaded. This option helps improve SEO for the page. And this style does not support A / B Testing Rule
+    * **Ajax Display**: The ARP block is loaded after the page loads, and it will take a while to display in the Frontend. This option is useful for loading speed of page
+    * **Block Display**: ARP block will be loaded when loading page and display as soon as the page is loaded. This option helps improve SEO for the page. And this style does not support A / B Testing Rule
   * In the **Limit number of products** field: Enter the maximum number of products displayed in a block.. If you leave it blank or set 0, all of products in the Product List will be displayed
   * In the **Display "Out-of-stock" products** field: select “No” to not display Out-of-Stock products in the Auto Related Product block.
   * In the **Product order** field: choose how to sort products in the block
@@ -235,7 +235,7 @@ This function makes the ARP extension not to work on this product. The Related P
 Firstly, the Admin needs to set the Rule with Where to Display = Manually and set store view = All Store Views, and then can customize the ARP block in the following ways. Otherwise, the Frontend will display both Widgets and Rules
 
 #### a. Create Widget
-* Step 1: Select the Type
+* **Step 1**: Select the Type
   * Choose `Content > Elements > Widgets > Add Widget`
   * In the Setting section, choose `Type = ARP Product List`, degisn any theme
 
@@ -243,7 +243,7 @@ Firstly, the Admin needs to set the Rule with Where to Display = Manually and se
 
   * Choose the `Continue` button
 
-* Step 2: Set up Widget
+* **Step 2**: Set up Widget
   * In the Storefront Properties section:
       * Enter the name of Widget and StoreView display
       * At Layout Update, choose the Widget display page in Display on, after that choose the display position for Widget on that page in the Container section
@@ -258,10 +258,10 @@ Firstly, the Admin needs to set the Rule with Where to Display = Manually and se
 ![ARP22](https://i.imgur.com/Gj7drW1.png)
 
   * Choose Save to finish creating Widget
-* Step 3: Check in Frontend
+* **Step 3**: Check in Frontend
 
 #### b. Insert ARP in CMS Static Block
-* Step 1: Insert the ARP into the CMS Static Block
+* **Step 1**: Insert the ARP into the CMS Static Block
   * Select `Content > Elements > Blocks > Edit / Add New CMS Static Block` that you want to add ARP
   * In Content of CMS Static Block, there are 2 ways to add ARP
       * Option 1: Select `Insert Widget> Widget Type = ARP Product List> Select Rule Name> Click Insert Widget`
@@ -278,7 +278,7 @@ Firstly, the Admin needs to set the Rule with Where to Display = Manually and se
 
   * Select `Save` to save the change
 
-* Step 2: Check the Frontend
+* **Step 2**: Check the Frontend
 
 #### c. Insert the code into the .phtml file
 This way you can insert anywhere you want, you just only need to know the location of the .phtml file
